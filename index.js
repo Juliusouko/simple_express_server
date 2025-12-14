@@ -16,7 +16,7 @@ const __dirname = path.dirname(__filename);
 const server = express();
 
 
-server.get("/", async (req, res) => {
+server.get("/{home}", async (req, res) => {
     try {
       const filePath = path.join(__dirname, "index.html");
       res.sendFile(filePath);
